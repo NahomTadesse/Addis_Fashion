@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Container, SimpleGrid, Image, Loader } from '@mantine/core';
 import { useRouter } from 'next/navigation';
 
-const API_BASE = 'http://fashion-api.addispages.com/api/v1';
+const API_BASE = 'https://fashion-api.addispages.com/api/v1';
 
 export default function LeadGrid() {
   const [products, setProducts] = useState([]);

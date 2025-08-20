@@ -27,7 +27,7 @@ export default function HomeGrid() {
 
   const getImageUrl = (path) => {
     const fileName = path.split("uploads/")[1];
-    return `http://fashion-api.addispages.com/api/v1/file/${fileName}`;
+    return `https://fashion-api.addispages.com/api/v1/file/${fileName}`;
   };
 
   const handleClick = (product) => {

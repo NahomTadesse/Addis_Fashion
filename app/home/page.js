@@ -288,7 +288,7 @@ const fetchProducts = async (endpoint) => {
 
 const fetchSubCategories = async () => {
   const { data, error } = await fetchWithErrorHandling(
-    'http://fashion-api.addispages.com/api/v1/categories/subcategory/all'
+    'https://fashion-api.addispages.com/api/v1/categories/subcategory/all'
   );
   
   if (error) {
