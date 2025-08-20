@@ -247,15 +247,14 @@ interface Collection {
   endpoint: string;
 }
 
-// Define valid collection IDs
 type CollectionId = 'trending-styles' | 'exclusive-deals' | 'fashion-guides';
 
-// Define collectionData type
 interface CollectionData {
-  [key in CollectionId]: Collection;
+  'trending-styles': Collection;
+  'exclusive-deals': Collection;
+  'fashion-guides': Collection;
 }
 
-// Product interface (adjust based on your API response)
 interface Product {
   productId: string;
   name: string;
@@ -264,7 +263,6 @@ interface Product {
   isNew?: boolean;
 }
 
-// Define collectionData
 const collectionData: CollectionData = {
   'trending-styles': {
     title: 'Trending Styles',
@@ -311,7 +309,7 @@ interface CollectionPageProps {
 }
 
 export default function CollectionPage({ params }: { params: Promise<CollectionPageProps['params']> }) {
-  const { collectionId } = use(params);
+  const { collectionId } = params as unknown as CollectionPageProps['params']; // Direct destructuring
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -319,7 +317,6 @@ export default function CollectionPage({ params }: { params: Promise<CollectionP
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        // Validate collectionId
         if (!(collectionId in collectionData)) {
           console.error(`Invalid collection ID: ${collectionId}`);
           setProducts([]);
@@ -356,7 +353,6 @@ export default function CollectionPage({ params }: { params: Promise<CollectionP
 
   return (
     <Container size="xl" py={20} className={classes.container}>
-      {/* Collection Header */}
       <div className={classes.header}>
         <Title order={1} className={classes.collectionTitle}>
           {collectionData[collectionId]?.title || 'Collection'}
@@ -366,7 +362,6 @@ export default function CollectionPage({ params }: { params: Promise<CollectionP
         </Text>
       </div>
 
-      {/* Compact Featured Products Carousel */}
       {products.length > 0 && (
         <>
           <Title order={2} mt={40} mb="md">
@@ -423,7 +418,6 @@ export default function CollectionPage({ params }: { params: Promise<CollectionP
         </>
       )}
 
-      {/* All Products Grid */}
       <Title order={2} mb="md">
         All Products
       </Title>
@@ -463,4 +457,12 @@ export default function CollectionPage({ params }: { params: Promise<CollectionP
       )}
     </Container>
   );
+}
+
+export async function generateStaticParams() {
+  return [
+    { collectionId: 'trending-styles' },
+    { collectionId: 'exclusive-deals' },
+    { collectionId: 'fashion-guides' },
+  ];
 }
