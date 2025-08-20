@@ -1,0 +1,73 @@
+.container {
+    max-width: 1400px;
+    padding: 0 16px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.collectionTitle {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    background: linear-gradient(to right, #4f46e5, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.collectionDescription {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.productCard {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    background: white;
+}
+
+.productCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #e0e0e0;
+}
+
+.imageSection {
+    position: relative;
+    overflow: hidden;
+}
+
+.productImage {
+    transition: transform 0.3s ease;
+}
+
+.productCard:hover .productImage {
+    transform: scale(1.05);
+}
+
+.newBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+.productDetails {
+    padding: 16px;
+}
+
+@media (max-width: 768px) {
+    .collectionTitle {
+        font-size: 1.8rem;
+    }
+    
+    .collectionDescription {
+        font-size: 1rem;
+    }
+}

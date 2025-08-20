@@ -1,0 +1,56 @@
+.carouselContainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.cardWrapper {
+  padding: 0 10px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carouselContainer {
+    padding: 20px;
+  }
+  
+  /* .cardWrapper {
+    padding: 10px;
+  } */
+  
+  /* .card {
+    cursor: pointer;
+    transition: transform 0.2s;
+  } */
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex; /* This ensures items stay in a row */
+}

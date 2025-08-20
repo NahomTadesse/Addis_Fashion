@@ -1,0 +1,140 @@
+.root {
+    background-color: var(--mantine-color-body);
+  }
+  
+  .mainTitle {
+    font-size: rem(48px);
+    font-weight: 800;
+    background: linear-gradient(45deg, #000000 0%, #434343 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: var(--mantine-spacing-xs);
+  
+    @media (max-width: 48em) {
+      font-size: rem(36px);
+    }
+  }
+  
+  .subtitle {
+    font-size: rem(18px);
+    max-width: rem(600px);
+    margin-left: auto;
+    margin-right: auto;
+  
+    @media (max-width: 48em) {
+      font-size: rem(16px);
+    }
+  }
+  
+  .contactForm {
+    background: white;
+    padding: var(--mantine-spacing-xl);
+    border-radius: var(--mantine-radius-lg);
+    box-shadow: var(--mantine-shadow-md);
+    height: 100%;
+  
+    @media (max-width: 48em) {
+      padding: var(--mantine-spacing-lg);
+    }
+  }
+  
+  .formTitle {
+    font-size: rem(28px);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: var(--mantine-spacing-md);
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: rem(50px);
+      height: rem(3px);
+      background: var(--mantine-color-dark-6);
+    }
+  }
+  
+  .input {
+    border-width: rem(2px);
+    padding: var(--mantine-spacing-md);
+    font-size: rem(16px);
+  
+    &:focus {
+      border-color: var(--mantine-color-dark-6);
+    }
+  }
+  
+  .textarea {
+    border-width: rem(2px);
+    padding: var(--mantine-spacing-md);
+    font-size: rem(16px);
+    min-height: rem(150px);
+  
+    &:focus {
+      border-color: var(--mantine-color-dark-6);
+    }
+  }
+  
+  .submitButton {
+    background: linear-gradient(45deg, #000000 0%, #434343 100%);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: rem(1px);
+    transition: all 0.3s ease;
+  
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  .contactInfo {
+    background: linear-gradient(135deg, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.05) 100%);
+    padding: var(--mantine-spacing-xl);
+    border-radius: var(--mantine-radius-lg);
+    height: 100%;
+  
+    @media (max-width: 48em) {
+      padding: var(--mantine-spacing-lg);
+    }
+  }
+  
+  .infoTitle {
+    font-size: rem(28px);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: var(--mantine-spacing-md);
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: rem(50px);
+      height: rem(3px);
+      background: var(--mantine-color-dark-6);
+    }
+  }
+  
+  .contactImage {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  
+  .contactIcon {
+    color: var(--mantine-color-dark-6);
+  }
+  
+  .notification {
+    border-radius: var(--mantine-radius-md);
+    box-shadow: var(--mantine-shadow-lg);
+  }

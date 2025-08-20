@@ -1,0 +1,30 @@
+.title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .categoryColumn {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .categoryTitle {
+    color: #1a1a1a;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 0.5rem;
+  }
+  
+  .categoryItem {
+    display: block;
+    color: #555;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .categoryItem:hover {
+    color: #000;
+    text-decoration: underline;
+  }

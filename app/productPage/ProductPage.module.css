@@ -1,0 +1,114 @@
+.root {
+    background-color: var(--mantine-color-body);
+  }
+  
+  .mainImageContainer {
+    position: relative;
+    border-radius: var(--mantine-radius-md);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+  }
+  
+  .mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  
+  .discountBadge {
+    position: absolute;
+    top: var(--mantine-spacing-md);
+    right: var(--mantine-spacing-md);
+    font-size: var(--mantine-font-size-lg);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    border: 2px solid transparent;
+    border-radius: var(--mantine-radius-sm);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  
+    &:hover {
+      border-color: var(--mantine-color-blue-5);
+    }
+  }
+  
+  .activeThumbnail {
+    border-color: var(--mantine-color-blue-7);
+  }
+  
+  .thumbnailImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .productTitle {
+    font-size: rem(36px);
+    font-weight: 800;
+    line-height: 1.2;
+  
+    @media (max-width: 48em) {
+      font-size: rem(28px);
+    }
+  }
+  
+  .discountPrice {
+    color: var(--mantine-color-red-7);
+  }
+  
+  .productDescription {
+    font-size: rem(18px);
+    line-height: 1.6;
+  }
+  
+  .colorButton {
+    text-transform: capitalize;
+    border-width: 2px;
+    min-width: rem(80px);
+  }
+  
+  .sizeButton {
+    min-width: rem(50px);
+    text-transform: uppercase;
+  }
+  
+  .quantityInput {
+    width: rem(60px);
+    text-align: center;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+  
+  .detailsList {
+    padding-left: rem(20px);
+    font-size: rem(16px);
+    line-height: 2;
+  
+    li {
+      margin-bottom: rem(8px);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 48em) {
+    .mainImageContainer {
+      aspect-ratio: 4/5;
+    }
+    
+    .thumbnail {
+      width: 60px;
+      height: 60px;
+    }
+  }
